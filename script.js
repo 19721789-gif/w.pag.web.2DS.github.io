@@ -38,4 +38,4 @@ document.querySelectorAll('nav a').forEach(enlace => {
             });
         }
     });
-});
+}); 
