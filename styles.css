@@ -1,0 +1,93 @@
+/* =========================================
+   1. CONFIGURACIÓN GLOBAL (BODY)
+   ========================================= */
+body {
+    /* Elimina los espacios por defecto del navegador */
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. MENÚ DE NAVEGACIÓN (NAV)
+   ========================================= */
+nav {
+    /* Menú transparente y fijo en la parte superior */
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el menú esté por encima de todo */
+    transition: background-color 0.5s;
+}
+
+nav ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    text-align: right;
+    margin-right: 3rem;
+}
+
+nav li {
+    display: inline; /* Coloca los elementos del menú en línea */
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none; /* Quita el subrayado de los links */
+    color: #fffdfd;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff9900; /* Color naranja al pasar el mouse */
+}
+
+/* =========================================
+   3. ENCABEZADO (HERO SECTION)
+   ========================================= */
+#mi-encabezado {
+    /* Imagen de fondo que cubre toda la sección */
+    background-image: url('img/Cuidad.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 35rem;
+    
+    /* Centrado de texto y color */
+    color: #ffffff;
+    display: flex; /* Flexbox para ayudar al centrado vertical si fuera necesario */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#mi-encabezado h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+#mi-encabezado p {
+    font-size: 25px;
+}
+
+/* =========================================
+   4. CONTENIDO PRINCIPAL
+   ========================================= */
+.contenido {
+    color: #000000;
+    font-size: 20px;
+    padding: 5%;
+    text-align: justify;
+}
+
+/* =========================================
+   5. PIE DE PÁGINA (FOOTER)
+   ========================================= */
+.footer {
+    background-color: rgb(5, 43, 150); /* Azul oscuro */
+    padding: 5rem 1rem; /* Reducido un poco para que no sea excesivo */
+    color: #ffffff;
+    text-align: center;
+}
