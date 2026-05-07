@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    background-color: #fcfcfc; /* Un blanco muy suave para el fondo general */
 }
 
 /* =========================================
@@ -36,24 +37,28 @@ nav li {
 
 nav a {
     text-decoration: none; /* Quita el subrayado de los links */
-    color: #fffdfd;
+    color: #ffffff; /* Letras blancas para el menú sobre el violeta */
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #ff9900; /* Color naranja al pasar el mouse */
+    color: #ff66b2; /* --- MODIFICADO --- Rosado brillante al pasar el mouse --- */
 }
 
 /* =========================================
    3. ENCABEZADO (HERO SECTION)
    ========================================= */
 #mi-encabezado {
-    /* Imagen de fondo que cubre toda la sección */
+    /* --- IMPORTANTE --- Asegúrate de que 'img/Cuidad.jpg' tenga tonos violetas profundos --- */
     background-image: url('img/Cuidad.jpg');
     background-size: cover;
     background-position: center;
     height: 35rem;
     
+    /* Overlay opcional para oscurecer la imagen y mejorar contraste (si es necesario) */
+    /* background-blend-mode: overlay;
+       background-color: rgba(50, 0, 80, 0.4); */ /* Un tinte violeta oscuro */
+
     /* Centrado de texto y color */
     color: #ffffff;
     display: flex; /* Flexbox para ayudar al centrado vertical si fuera necesario */
@@ -66,28 +71,36 @@ nav a:hover {
 #mi-encabezado h1 {
     font-size: 45px;
     margin-bottom: 10px;
+    color: #ffffff; /* Mantener blanco para contraste claro */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para resaltar sobre el fondo */
 }
 
 #mi-encabezado p {
     font-size: 25px;
+    color: #ffffff;
 }
 
 /* =========================================
    4. CONTENIDO PRINCIPAL
    ========================================= */
 .contenido {
-    color: #000000;
+    color: #2e004d; /* --- MODIFICADO --- Un negro/violeta muy oscuro para el texto principal --- */
     font-size: 20px;
     padding: 5%;
     text-align: justify;
+}
+
+/* Estilo para los títulos dentro del contenido (si los hay) */
+.contenido h2 {
+    color: #d14789; /* --- AÑADIDO --- Rosado oscuro para títulos de sección --- */
 }
 
 /* =========================================
    5. PIE DE PÁGINA (FOOTER)
    ========================================= */
 .footer {
-    background-color: rgb(5, 43, 150); /* Azul oscuro */
+    background-color: #5a0099; /* --- MODIFICADO --- Violeta oscuro/profundo --- */
     padding: 5rem 1rem; /* Reducido un poco para que no sea excesivo */
-    color: #ffffff;
+    color: #ff99cc; /* --- MODIFICADO --- Rosado pastel suave para el texto del footer --- */
     text-align: center;
 } 
