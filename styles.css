@@ -1,65 +1,131 @@
-/* FONDO GENERAL */
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
 body{
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f0ff;
-    color: #5b2c83;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4e9ff;
+    color: #2d114d;
 }
 
-/* ENCABEZADO */
-.encabezado{
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(to right, #d9b3ff, #f3e6ff);
-}
+/* =========================
+   ENCABEZADO
+========================= */
 
-/* IMAGEN */
-.encabezado img{
-    width: 90%;
-    max-width: 900px;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-}
+#mi-encabezado{
+    background-image: linear-gradient(
+        rgba(75, 0, 130, 0.7),
+        rgba(128, 0, 128, 0.7)
+    ),
+    url('img/Gemini_Generated_Image_ehv54oehv54oehv5\ \(1\).png');
 
-/* TITULO */
-.encabezado h1{
-    font-size: 45px;
-    margin-top: 20px;
-    color: #6a0dad;
-}
+    background-size: cover;
+    background-position: center;
+    height: 35rem;
 
-/* TEXTO */
-.encabezado p{
-    font-size: 20px;
-    width: 80%;
-    margin: auto;
-}
-
-/* CONTENIDO */
-.contenido{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 40px;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    padding: 20px;
 }
 
-/* TARJETAS */
+/* Título principal */
+#mi-encabezado h1{
+    font-size: 55px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 10px black;
+}
+
+/* Texto del encabezado */
+#mi-encabezado p{
+    font-size: 24px;
+    width: 70%;
+    line-height: 1.6;
+    text-shadow: 2px 2px 8px black;
+}
+
+/* =========================
+   MENÚ
+========================= */
+
+nav{
+    background-color: rgba(75, 0, 130, 0.8);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+/* Lista del menú */
+ul{
+    list-style: none;
+    text-align: right;
+    margin-right: 40px;
+}
+
+/* Elementos del menú */
+li{
+    display: inline;
+    margin-right: 25px;
+}
+
+/* Enlaces */
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+a:hover{
+    color: #ffccff;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido{
+    padding: 60px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Títulos de contenido */
+.contenido h2{
+    color: #6a0dad;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Tarjetas */
 .tarjeta{
-    background: white;
-    width: 280px;
-    padding: 20px;
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
 }
 
-/* EFECTO */
-.tarjeta:hover{
-    transform: scale(1.05);
-}
+/* =========================
+   FOOTER
+========================= */
 
-/* TITULOS */
-.tarjeta h2{
-    color: #8a2be2;
-} 
+.footer{
+    background-color: #4b0082;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
