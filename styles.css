@@ -1,167 +1,65 @@
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* FONDO GENERAL */
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    color: #222;
-    line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f0ff;
+    color: #5b2c83;
 }
 
-/* =========================
-   ENCABEZADO
-========================= */
-
-#mi-encabezado{
-    
-    /* Imagen de fondo + capa oscura */
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url('img/Cuidad.jpg');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+/* ENCABEZADO */
+.encabezado{
     text-align: center;
-    color: white;
-
     padding: 20px;
+    background: linear-gradient(to right, #d9b3ff, #f3e6ff);
 }
 
-/* Título */
-
-#mi-encabezado h1{
-    font-size: 60px;
-    margin-bottom: 20px;
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
-}
-
-/* Texto */
-
-#mi-encabezado p{
-    font-size: 24px;
-    max-width: 800px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
-
-/* =========================
-   MENÚ
-========================= */
-
-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    padding: 20px 40px;
-
-    background-color: rgba(0,0,0,0.4);
-    backdrop-filter: blur(6px);
-
-    z-index: 1000;
-
-    transition: 0.4s ease;
-}
-
-/* Lista */
-
-nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
-}
-
-/* Links */
-
-nav a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-
-    transition: 0.3s ease;
-}
-
-/* Hover */
-
-nav a:hover{
-    color: #ff69b4;
-}
-
-/* =========================
-   CONTENIDO
-========================= */
-
-.contenido{
-    padding: 80px 10%;
-    font-size: 20px;
-    text-align: justify;
-
-    background-color: white;
-
-    border-radius: 20px;
-
+/* IMAGEN */
+.encabezado img{
     width: 90%;
-    margin: 50px auto;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Títulos dentro del contenido */
-
-.contenido h2{
-    margin-bottom: 20px;
-    color: #ff69b4;
-    font-size: 35px;
+/* TITULO */
+.encabezado h1{
+    font-size: 45px;
+    margin-top: 20px;
+    color: #6a0dad;
 }
 
-/* Párrafos */
-
-.contenido p{
-    margin-bottom: 20px;
+/* TEXTO */
+.encabezado p{
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-    background: linear-gradient(
-        to right,
-        rgb(5,43,150),
-        rgb(91,33,182)
-    );
-
-    color: white;
-    text-align: center;
-
-    padding: 50px 20px;
-
-    margin-top: 50px;
+/* CONTENIDO */
+.contenido{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
 }
 
-/* Texto footer */
+/* TARJETAS */
+.tarjeta{
+    background: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
 
-.footer p{
-    font-size: 18px;
+/* EFECTO */
+.tarjeta:hover{
+    transform: scale(1.05);
+}
+
+/* TITULOS */
+.tarjeta h2{
+    color: #8a2be2;
 } 
