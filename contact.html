@@ -2,72 +2,166 @@
 <html lang="es">
 
 <head>
+
+    <!-- ========================================= -->
+    <!-- CONFIGURACIÓN GENERAL DE LA PÁGINA -->
+    <!-- ========================================= -->
     <meta charset="UTF-8">
+
+    <!-- ADAPTAR A DISPOSITIVOS MÓVILES -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Curso HTML</title>
+    <!-- TÍTULO DE LA PÁGINA -->
+    <title>Contacto | Arquitectura de Software</title>
 
-    <!-- Conecta el CSS -->
+    <!-- ENLACE AL ARCHIVO CSS -->
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
+    <!-- ========================================= -->
+    <!-- ENCABEZADO PRINCIPAL -->
+    <!-- ========================================= -->
     <header id="mi-encabezado">
 
-        <!-- MENÚ -->
+        <!-- MENÚ DE NAVEGACIÓN -->
         <nav>
+
             <ul>
+
                 <li><a href="index.html">Inicio</a></li>
+
                 <li><a href="about.html">Acerca de</a></li>
+
                 <li><a href="contact.html">Contacto</a></li>
+
             </ul>
+
         </nav>
 
-        <!-- TEXTO -->
-        <h1>Diseño de Arquitectura de Software</h1>
+        <!-- TEXTO DEL ENCABEZADO -->
+        <div class="texto-encabezado">
 
-        <p>
-            Contacta con nosotros para aprender más sobre HTML,
-            diseño web y arquitectura de software.
-        </p>
+            <h1>Contacto</h1>
+
+            <p>
+                Comunícate con nosotros para aprender más
+                sobre diseño de arquitectura de software.
+            </p>
+
+        </div>
 
     </header>
 
-    <!-- CONTENIDO -->
+    <!-- ========================================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================================= -->
     <main>
 
+        <!-- CONTENEDOR DE INFORMACIÓN -->
         <section class="contenido">
 
             <h2>Información de Contacto</h2>
 
-            <!-- IMAGEN -->
-            <img src="img/software.jpg"
-            alt="Arquitectura de Software"
-            class="imagen-contacto">
-
             <hr>
 
-            <p><strong>Teléfono:</strong> 7858-2246</p>
+            <!-- IMAGEN DE CONTACTO -->
+            <img 
+                src="img/software.jpg"
+                alt="Arquitectura de Software"
+                class="imagen-contacto"
+            >
 
-            <p><strong>Correo:</strong> queli1801gmail.com</p>
+            <!-- TEXTO INFORMATIVO -->
+            <p>
+                Si deseas obtener más información sobre
+                arquitectura de software, desarrollo web
+                y tecnologías modernas,
+                puedes comunicarte con nosotros.
+            </p>
 
-            <p><strong>Correo:</strong> infoclassinsibo@gmail.com</p>
+            <!-- DATOS DE CONTACTO -->
+            <div class="datos-contacto">
 
-            <p><strong>Facebook:</strong> Infoclass Insibo</p>
+                <p><strong>Teléfono:</strong> 7858-2246</p>
+
+                <p><strong>Correo:</strong> queli1801@gmail.com</p>
+
+                <p><strong>Correo alternativo:</strong> infoclassinsibo@gmail.com</p>
+
+                <p><strong>Facebook:</strong> Infoclass Insibo</p>
+
+            </div>
+
+        </section>
+
+        <!-- CONTENEDOR DEL FORMULARIO -->
+        <section class="contenido">
+
+            <h2>Envíanos un Mensaje</h2>
+
+            <!-- FORMULARIO -->
+            <form>
+
+                <!-- CAMPO NOMBRE -->
+                <label for="nombre">Nombre:</label>
+
+                <input 
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ingresa tu nombre"
+                >
+
+                <!-- CAMPO CORREO -->
+                <label for="correo">Correo:</label>
+
+                <input 
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Ingresa tu correo"
+                >
+
+                <!-- CAMPO MENSAJE -->
+                <label for="mensaje">Mensaje:</label>
+
+                <textarea 
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Escribe tu mensaje"
+                ></textarea>
+
+                <!-- BOTÓN -->
+                <button type="submit">
+                    Enviar Mensaje
+                </button>
+
+            </form>
 
         </section>
 
     </main>
 
+    <!-- ========================================= -->
     <!-- PIE DE PÁGINA -->
+    <!-- ========================================= -->
     <footer class="footer">
-        Derechos reservados © 2026
+
+        <p>
+            Derechos reservados © 2026
+        </p>
+
     </footer>
 
-    <!-- SCRIPT -->
+    <!-- ========================================= -->
+    <!-- ARCHIVO JAVASCRIPT -->
+    <!-- ========================================= -->
     <script src="script.js"></script>
 
 </body>
+
 </html>

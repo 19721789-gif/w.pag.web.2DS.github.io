@@ -1,131 +1,342 @@
-/* =========================
+/* =========================================
    CONFIGURACIÓN GENERAL
-========================= */
+========================================= */
 
 body{
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4e9ff;
     color: #2d114d;
 }
 
-/* =========================
-   ENCABEZADO
-========================= */
+/* Suaviza el desplazamiento */
+html{
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   ENCABEZADO PRINCIPAL
+========================================= */
 
 #mi-encabezado{
-    background-image: linear-gradient(
+
+    /* Imagen con efecto oscuro */
+    background-image:
+    linear-gradient(
         rgba(75, 0, 130, 0.7),
         rgba(128, 0, 128, 0.7)
     ),
-    url('img/Gemini_Generated_Image_ehv54oehv54oehv5\ \(1\).png');
+    url('img/Gemini_Generated_Image_ehv54oehv54oehv5 (1).png');
 
     background-size: cover;
     background-position: center;
+
+    /* Tamaño del encabezado */
     height: 35rem;
 
+    /* Organización del contenido */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    /* Texto */
     text-align: center;
     color: white;
+
     padding: 20px;
 }
 
+/* =========================================
+   TEXTO DEL ENCABEZADO
+========================================= */
+
 /* Título principal */
 #mi-encabezado h1{
-    font-size: 55px;
-    margin-bottom: 10px;
+
+    font-size: 60px;
+    margin-bottom: 15px;
+
     text-shadow: 3px 3px 10px black;
 }
 
-/* Texto del encabezado */
+/* Descripción */
 #mi-encabezado p{
+
     font-size: 24px;
     width: 70%;
-    line-height: 1.6;
+
+    line-height: 1.8;
+
     text-shadow: 2px 2px 8px black;
 }
 
-/* =========================
-   MENÚ
-========================= */
+/* =========================================
+   MENÚ DE NAVEGACIÓN
+========================================= */
 
 nav{
-    background-color: rgba(75, 0, 130, 0.8);
+
+    background-color: rgba(75, 0, 130, 0.85);
+
     padding: 15px;
+
     position: fixed;
+
     top: 0;
     width: 100%;
-    backdrop-filter: blur(5px);
+
     z-index: 1000;
+
+    backdrop-filter: blur(5px);
 }
 
-/* Lista del menú */
-ul{
+/* Lista */
+nav ul{
+
     list-style: none;
-    text-align: right;
-    margin-right: 40px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 30px;
+
+    margin: 0;
+    padding-right: 40px;
 }
 
-/* Elementos del menú */
-li{
+/* Elementos */
+nav li{
     display: inline;
-    margin-right: 25px;
 }
 
 /* Enlaces */
-a{
+nav a{
+
     text-decoration: none;
+
     color: white;
-    font-weight: bold;
+
     font-size: 18px;
+    font-weight: bold;
+
     transition: 0.3s;
 }
 
-/* Efecto al pasar el mouse */
-a:hover{
+/* Hover */
+nav a:hover{
+
     color: #ffccff;
+
+    border-bottom: 2px solid white;
 }
 
-/* =========================
-   CONTENIDO
-========================= */
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
 
 .contenido{
-    padding: 60px;
-    font-size: 20px;
+
+    background-color: white;
+
+    margin: 40px auto;
+
+    width: 80%;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+
+    line-height: 1.9;
+
     text-align: justify;
-    line-height: 1.8;
+
+    font-size: 20px;
 }
 
-/* Títulos de contenido */
+/* =========================================
+   TÍTULOS
+========================================= */
+
 .contenido h2{
+
     color: #6a0dad;
-    font-size: 35px;
+
+    font-size: 38px;
+
     text-align: center;
+
     margin-bottom: 20px;
 }
 
-/* Tarjetas */
-.tarjeta{
-    background-color: white;
-    padding: 30px;
-    margin-top: 30px;
+/* Línea decorativa */
+hr{
+
+    border: none;
+
+    height: 3px;
+
+    background-color: #b266ff;
+
+    width: 60%;
+
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   LISTAS
+========================================= */
+
+.contenido ul{
+
+    margin-top: 20px;
+
+    padding-left: 40px;
+}
+
+.contenido li{
+
+    margin-bottom: 15px;
+
+    color: #4b0082;
+}
+
+/* =========================================
+   IMAGEN DE CONTACTO
+========================================= */
+
+.imagen-contacto{
+
+    width: 100%;
+
+    max-width: 500px;
+
+    display: block;
+
+    margin: 20px auto;
+
     border-radius: 20px;
+
     box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* =========================================
+   FORMULARIO
+========================================= */
+
+form{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+/* Campos */
+input,
+textarea{
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 2px solid #c084fc;
+
+    font-size: 16px;
+}
+
+/* Efecto al seleccionar */
+input:focus,
+textarea:focus{
+
+    outline: none;
+
+    border-color: #6a0dad;
+
+    box-shadow: 0px 0px 10px rgba(106, 13, 173, 0.4);
+}
+
+/* Botón */
+button{
+
+    background-color: #6a0dad;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover del botón */
+button:hover{
+
+    background-color: #8a2be2;
+
+    transform: scale(1.03);
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
 
 .footer{
+
     background-color: #4b0082;
+
     color: white;
+
     text-align: center;
+
     padding: 30px;
-    margin-top: 40px;
+
+    margin-top: 50px;
+
+    font-size: 18px;
 }
+
+/* =========================================
+   RESPONSIVE PARA CELULARES
+========================================= */
+
+@media(max-width: 768px){
+
+    #mi-encabezado h1{
+        font-size: 40px;
+    }
+
+    #mi-encabezado p{
+        width: 90%;
+        font-size: 18px;
+    }
+
+    nav ul{
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .contenido{
+        width: 90%;
+        padding: 25px;
+        font-size: 18px;
+    }
+
+    .contenido h2{
+        font-size: 30px;
+    }
+} 
