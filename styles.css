@@ -41,13 +41,41 @@ html{
     justify-content: center;
     align-items: center;
 
-    /* Texto */
+    /* Centra todo el texto */
     text-align: center;
+
     color: white;
 
     padding: 20px;
 }
 
+/* CONTENEDOR DEL TEXTO */
+.texto-encabezado{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TÍTULO */
+.texto-encabezado h1{
+
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+/* SUBTÍTULO */
+.texto-encabezado p{
+
+    font-size: 28px;
+
+    text-align: center;
+
+    margin: 0 auto;
+
+    width: 100%;
+}
 /* =========================================
    TEXTO DEL ENCABEZADO
 ========================================= */
