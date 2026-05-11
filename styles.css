@@ -1,140 +1,167 @@
-/* =========================================
-   1. VARIABLES Y RESET (Modernización)
-   ========================================= */
-:root {
-    --primary-color: #00d4ff;    /* Cian neón (Tecnología) */
-    --secondary-color: #7000ff;  /* Violeta profundo */
-    --bg-dark: #0a0b10;          /* Fondo casi negro */
-    --bg-card: #161b22;          /* Gris oscuro para elementos */
-    --text-main: #e6edf3;        /* Blanco suave para lectura */
-    --text-muted: #8b949e;       /* Gris para detalles */
-    --transition: all 0.3s ease;
-}
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    overflow-x: hidden;
-}
-
-/* =========================================
-   2. NAVEGACIÓN (Glassmorphism)
-   ========================================= */
-nav {
-    background-color: rgba(10, 11, 16, 0.8);
-    backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
-    padding: 15px 50px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav li {
-    margin-left: 35px;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: var(--transition);
-    letter-spacing: 1px;
-}
+/* =========================
+   ENCABEZADO
+========================= */
 
-nav a:hover {
-    color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}
+#mi-encabezado{
+    
+    /* Imagen de fondo + capa oscura */
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('img/Cuidad.jpg');
 
-/* =========================================
-   3. HERO SECTION (High Tech Look)
-   ========================================= */
-#mi-encabezado {
-    background: linear-gradient(135deg, rgba(10,11,16,0.8) 0%, rgba(112,0,255,0.2) 100%), 
-                url('img/Cuidad.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax suave */
-    height: 80vh;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    padding: 0 10%;
+    color: white;
+
+    padding: 20px;
 }
 
-#mi-encabezado h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño fluido */
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
-    background: linear-gradient(to right, #ffffff, var(--primary-color));
+/* Título */
 
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
+#mi-encabezado h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
 }
 
-#mi-encabezado p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    max-width: 600px;
+/* Texto */
+
+#mi-encabezado p{
+    font-size: 24px;
+    max-width: 800px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
-/* =========================================
-   4. CONTENIDO (Limpio y Estructurado)
-   ========================================= */
-.contenido {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    text-align: left; /* Alineación estándar de doc. técnica */
+/* =========================
+   MENÚ
+========================= */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 40px;
+
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+
+    z-index: 1000;
+
+    transition: 0.4s ease;
 }
 
-.contenido h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    border-left: 4px solid var(--secondary-color);
-    padding-left: 15px;
-    margin-bottom: 25px;
+/* Lista */
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
 }
 
-/* Estilo para bloques de código o énfasis técnico */
-code {
-    background: var(--bg-card);
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #ff79c6; /* Color sintaxis */
+/* Links */
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+
+    transition: 0.3s ease;
 }
 
-/* =========================================
-   5. FOOTER (Minimalista)
-   ========================================= */
-.footer {
-    background-color: #050505;
-    padding: 4rem 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--text-muted);
+/* Hover */
+
+nav a:hover{
+    color: #ff69b4;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido{
+    padding: 80px 10%;
+    font-size: 20px;
+    text-align: justify;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    width: 90%;
+    margin: 50px auto;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Títulos dentro del contenido */
+
+.contenido h2{
+    margin-bottom: 20px;
+    color: #ff69b4;
+    font-size: 35px;
+}
+
+/* Párrafos */
+
+.contenido p{
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background: linear-gradient(
+        to right,
+        rgb(5,43,150),
+        rgb(91,33,182)
+    );
+
+    color: white;
     text-align: center;
-    font-size: 0.9rem;
+
+    padding: 50px 20px;
+
+    margin-top: 50px;
 }
 
-.footer b {
-    color: var(--primary-color);
+/* Texto footer */
+
+.footer p{
+    font-size: 18px;
 } 
