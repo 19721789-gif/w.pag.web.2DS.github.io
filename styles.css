@@ -1,106 +1,140 @@
 /* =========================================
-   1. CONFIGURACIÓN GLOBAL (BODY)
+   1. VARIABLES Y RESET (Modernización)
    ========================================= */
+:root {
+    --primary-color: #00d4ff;    /* Cian neón (Tecnología) */
+    --secondary-color: #7000ff;  /* Violeta profundo */
+    --bg-dark: #0a0b10;          /* Fondo casi negro */
+    --bg-card: #161b22;          /* Gris oscuro para elementos */
+    --text-main: #e6edf3;        /* Blanco suave para lectura */
+    --text-muted: #8b949e;       /* Gris para detalles */
+    --transition: all 0.3s ease;
+}
+
 body {
-    /* Elimina los espacios por defecto del navegador */
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    background-color: #fcfcfc; /* Un blanco muy suave para el fondo general */
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
 }
 
 /* =========================================
-   2. MENÚ DE NAVEGACIÓN (NAV)
+   2. NAVEGACIÓN (Glassmorphism)
    ========================================= */
 nav {
-    /* Menú transparente y fijo en la parte superior */
-    background-color: rgba(255, 255, 255, 0);
-    padding: 20px;
+    background-color: rgba(10, 11, 16, 0.8);
+    backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
+    padding: 15px 50px;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000; /* Asegura que el menú esté por encima de todo */
-    transition: background-color 0.5s;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
-    list-style-type: none; /* Quita los puntos de la lista */
-    text-align: right;
-    margin-right: 3rem;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-    display: inline; /* Coloca los elementos del menú en línea */
-    margin-right: 30px;
+    margin-left: 35px;
 }
 
 nav a {
-    text-decoration: none; /* Quita el subrayado de los links */
-    color: #ffffff; /* Letras blancas para el menú sobre el violeta */
-    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    letter-spacing: 1px;
 }
 
 nav a:hover {
-    color: #ff66b2; /* --- MODIFICADO --- Rosado brillante al pasar el mouse --- */
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 /* =========================================
-   3. ENCABEZADO (HERO SECTION)
+   3. HERO SECTION (High Tech Look)
    ========================================= */
 #mi-encabezado {
-    /* --- IMPORTANTE --- Asegúrate de que 'img/Cuidad.jpg' tenga tonos violetas profundos --- */
-    background-image: url('img/Cuidad.jpg');
+    background: linear-gradient(135deg, rgba(10,11,16,0.8) 0%, rgba(112,0,255,0.2) 100%), 
+                url('img/Cuidad.jpg');
     background-size: cover;
     background-position: center;
-    height: 35rem;
-    
-    /* Overlay opcional para oscurecer la imagen y mejorar contraste (si es necesario) */
-    /* background-blend-mode: overlay;
-       background-color: rgba(50, 0, 80, 0.4); */ /* Un tinte violeta oscuro */
-
-    /* Centrado de texto y color */
-    color: #ffffff;
-    display: flex; /* Flexbox para ayudar al centrado vertical si fuera necesario */
+    background-attachment: fixed; /* Parallax suave */
+    height: 80vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 0 10%;
 }
 
 #mi-encabezado h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-    color: #ffffff; /* Mantener blanco para contraste claro */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para resaltar sobre el fondo */
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño fluido */
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #ffffff, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
 }
 
 #mi-encabezado p {
-    font-size: 25px;
-    color: #ffffff;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
 }
 
 /* =========================================
-   4. CONTENIDO PRINCIPAL
+   4. CONTENIDO (Limpio y Estructurado)
    ========================================= */
 .contenido {
-    color: #2e004d; /* --- MODIFICADO --- Un negro/violeta muy oscuro para el texto principal --- */
-    font-size: 20px;
-    padding: 5%;
-    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: left; /* Alineación estándar de doc. técnica */
 }
 
-/* Estilo para los títulos dentro del contenido (si los hay) */
 .contenido h2 {
-    color: #d14789; /* --- AÑADIDO --- Rosado oscuro para títulos de sección --- */
+    color: var(--primary-color);
+    font-size: 2rem;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+/* Estilo para bloques de código o énfasis técnico */
+code {
+    background: var(--bg-card);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #ff79c6; /* Color sintaxis */
 }
 
 /* =========================================
-   5. PIE DE PÁGINA (FOOTER)
+   5. FOOTER (Minimalista)
    ========================================= */
 .footer {
-    background-color: #5a0099; /* --- MODIFICADO --- Violeta oscuro/profundo --- */
-    padding: 5rem 1rem; /* Reducido un poco para que no sea excesivo */
-    color: #ff99cc; /* --- MODIFICADO --- Rosado pastel suave para el texto del footer --- */
+    background-color: #050505;
+    padding: 4rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
     text-align: center;
-} 
+    font-size: 0.9rem;
+}
+
+.footer b {
+    color: var(--primary-color);
+}
