@@ -86,7 +86,7 @@ nav a:hover {
     margin-bottom: 1rem;
     letter-spacing: -1px;
     background: linear-gradient(to right, #ffffff, var(--primary-color));
-    -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
     font-weight: 800;
 }
@@ -137,4 +137,4 @@ code {
 
 .footer b {
     color: var(--primary-color);
-}
+} 
